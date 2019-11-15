@@ -98,7 +98,7 @@ requests==2.9.1
 roman==2.0.0
 rope-py3k==0.9.4.post1
 RPi.GPIO==0.6.5
-scapy==2.4.0
+scapy==2.4.1
 scikit-image==0.10.1
 scikit-learn==0.20.1
 scipy==0.17.0
