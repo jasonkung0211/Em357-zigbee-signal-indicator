@@ -1,0 +1,57 @@
+commit 0b5c497caac648ce11d71fd3d55acb5aa1cd4421
+Author: Jason Kung <jason.kung@ecoluminatech.com>
+Date:   Sat Jul 6 05:16:43 2019 +0800
+
+    keep fast
+
+diff --git a/ZSI.py b/ZSI.py
+index c66664a..4a19c12 100644
+--- a/ZSI.py
++++ b/ZSI.py
+@@ -11,6 +11,9 @@ from lcd import Lcd
+ from buzzer import Buzzer
+ 
+ 
++current_milli_time = lambda: int(round(time.time() * 1000))
++
++
+ class Mode(Enum):
+     START_MODE = '@'
+     STOP_MODE = '#'
+@@ -179,6 +182,7 @@ def io_jobs():
+ 
+     rssi = []
+     lqi = []
++    now = current_milli_time()
+     while sp.is_open():
+ 
+         if current_mode == Mode.STOP_MODE:
+@@ -229,7 +233,7 @@ def io_jobs():
+                         lcd.redraw(channel, 'Bad', str(y), str(x))
+                         buzzer.buzz(.1, 3200, 4)
+ 
+-        sleep(.1)
++        sleep(.001)
+ 
+         if not input_queue.empty():
+             data = input_queue.get()
+@@ -264,8 +268,9 @@ def io_jobs():
+                 except ValueError:
+                     continue
+ 
+-                if len(rssi) > 10:
++                if int(current_milli_time() - now) > 300:
+                     sp.flush_Input()
++                    now = current_milli_time()
+                     try:
+                         x = statistics.mode(rssi)
+                         y = statistics.mode(lqi)
+@@ -294,7 +299,7 @@ if __name__ == '__main__':
+     current_mode = ''
+ 
+     input_queue = queue.Queue()
+-    output_queue = queue.Queue()
++    output_queue = queue.LifoQueue()
+ 
+     sp = SerialProcess()
+     lcd = Lcd()
