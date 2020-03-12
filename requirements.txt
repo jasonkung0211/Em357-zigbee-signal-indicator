@@ -66,7 +66,7 @@ pipreqs==0.4.9
 plainbox==0.25
 playsound==1.2.2
 ply==3.7
-psutil==3.4.2
+psutil==5.6.6
 ptyprocess==0.5
 py==1.4.31
 pyasn1==0.1.9
