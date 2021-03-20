@@ -37,7 +37,7 @@ ipython==2.4.1
 iso8601==0.1.12
 itsdangerous==1.1.0
 jedi==0.9.0
-Jinja2==2.10
+Jinja2==2.11.3
 language-selector==0.1
 louis==2.6.4
 luma.core==1.8.3
