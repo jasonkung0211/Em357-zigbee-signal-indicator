@@ -42,7 +42,7 @@ language-selector==0.1
 louis==2.6.4
 luma.core==1.8.3
 luma.lcd==1.1.0
-lxml==3.5.0
+lxml==4.6.3
 Mako==1.0.3
 Markdown==2.6.6
 MarkupSafe==0.23
