@@ -68,7 +68,7 @@ playsound==1.2.2
 ply==3.7
 psutil==3.4.2
 ptyprocess==0.5
-py==1.4.31
+py==1.10.0
 pyasn1==0.1.9
 pycparser==2.19
 pycups==1.9.73
