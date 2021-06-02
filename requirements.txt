@@ -138,7 +138,7 @@ unity-scope-virtualbox==0.1
 unity-scope-yelp==0.1
 unity-scope-zotero==0.1
 unity-tweak-tool==0.0.7
-urllib3==1.13.1
+urllib3==1.26.5
 usb-creator==0.3.0
 Werkzeug==0.14.1
 wx-sdk==1.0.5
