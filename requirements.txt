@@ -61,7 +61,7 @@ paramiko==2.4.2
 pep8==1.7.0
 pexpect==4.0.1
 pigpio==1.42
-Pillow==5.4.1
+Pillow==9.0.0
 pipreqs==0.4.9
 plainbox==0.25
 playsound==1.2.2
