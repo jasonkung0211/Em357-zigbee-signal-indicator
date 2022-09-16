@@ -43,7 +43,7 @@ louis==2.6.4
 luma.core==1.8.3
 luma.lcd==1.1.0
 lxml==3.5.0
-Mako==1.0.3
+Mako==1.2.2
 Markdown==2.6.6
 MarkupSafe==0.23
 matplotlib==1.5.1
